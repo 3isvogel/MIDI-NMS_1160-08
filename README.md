@@ -61,8 +61,12 @@ Either of the two logics can be used, note that:
 
 ## Pin mapping
 
-The official documentation repotrs the pin numbering for the keyboard connector (On the MSX side)
+The official documentation repotrs the pin numbering for the keyboard connector on the MSX side.
 ![pin mapping](assets/input_output.jpg)
+
+This is how pins are numbered in this document if you were to look **AT** the 1160-08 cable connector.
+
+Take the cable connector and point it at yourself with the little knotch on the top, that's how I am numbering them (1 top-left, 2 bottom-left, and so on)
 
 - In <b style="color: red;">RED</b> are the input pins for the keyboard (used to enable the scan columns)
 - In <b style="color: blue;">BLUE</b> are the output pins, connected directly to the arduino
