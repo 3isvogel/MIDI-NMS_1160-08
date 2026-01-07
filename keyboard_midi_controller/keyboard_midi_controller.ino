@@ -99,7 +99,7 @@ char scanLine() {
 #define MIDI_C0         ((uint8_t)12)
 #define MIDI_PITCH(block, index) ((uint8_t)MIDI_C0 + pitch_shift * 12\
     + (uint8_t)((block) << 3)\
-    + (uint8_t) (ndex))
+    + (uint8_t) (index))
 
 // Checks single notes in the block and send MIDI packets based on their state
 void checkNoteBlock(uint8_t s) {
