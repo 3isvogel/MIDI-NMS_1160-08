@@ -4,7 +4,10 @@
 // Pins based on Arduino Pro Micro
 #define CONTROL_MUX(n)  (14 + (n))
 #define READ_KEY(n)     (2 + (n))
+
+#define MIDI_C0         ((uint8_t)12)
 #define PITCH_SHIFT_MAX 4
+#define SEMITONES_SHIFT 12
 #define CHANNEL_MAX     4
 
 // LAST_BLOCK_CONTROL:
@@ -96,8 +99,7 @@ char scanLine() {
 #define TEST_KEY(x)         ((x) & __mask)
 
 // Compute the actual pitch from pitch_shift, block and key index
-#define MIDI_C0         ((uint8_t)12)
-#define MIDI_PITCH(block, index) ((uint8_t)MIDI_C0 + pitch_shift * 12\
+#define MIDI_PITCH(block, index) ((uint8_t)MIDI_C0 + pitch_shift * SEMITONES_SHIFT\
     + (uint8_t)((block) << 3)\
     + (uint8_t) (index))
 
